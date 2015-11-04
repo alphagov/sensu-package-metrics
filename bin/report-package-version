@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+require 'sensu-plugin/metric/cli'
+require 'sensu/package/metrics/package_log_reader'
+require 'date'
+class ReportPackageVersionMetric < Sensu::Plugin::Metric::CLI::JSON
+  option :package, short: "-p PACKAGE", required: true
+  option :log, short: "-l LOGFILE"
+
+  def run
+    logfile = config.fetch(:log, "/var/log/dpkg.log")
+    package =  config.fetch(:package)
+    ok Sensu::Package::Metrics::PackageLogReader.new(logfile).find(package).to_h
+  end
+
+end
