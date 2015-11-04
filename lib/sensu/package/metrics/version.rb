@@ -1,0 +1,7 @@
+module Sensu
+  module Package
+    module Metrics
+      VERSION = "0.0.1"
+    end
+  end
+end
