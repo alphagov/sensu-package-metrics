@@ -1,3 +1,11 @@
 language: ruby
 rvm:
-  - 2.0.0
+- 2.0.0
+deploy:
+  provider: rubygems
+  api_key:
+    secure: ixGOGIGpRpELXCrouqOvxc/Sv0M9ZKD2ydfLhMwzL4U1Skn0Yhq7OEFgAkABVbaAuL6k1YCCHjKAQI8A/eaU4QCdTLm0JP3zfQ8kQynPo9o/uh/SMselVpeSa1MkocwZIyq/tGlP2BA1v1eBy+zpucgM5gGVyinQzLIgKNytMfagIiqV4q1eWlp3Hgde9NR+sy2floaeLAi292pYZQQZ5IwN4y4BnlOOsRzG+7Y35ee3v4H/o8mVfFHtgAmtfZKiSw4tVgctJ/ZlXG39C+G6irMHLYRLKowMuJTo7LLoCGz1odYY617Z2/Ov7cVnlT1aZqDoKAwD/UTlP0yITAFEB/OG52W3QIGuOcBHGRvSC2IMxF25gs8NzMrlOm/3x0UF9Fkud2olO45jhKEN1o6B39+wVLyYOycFPTt/A/52/U62iBvunNTTKe/UcTTOWrD8gbrnf4SbqO/EJD8ufliHwaDtV9KwudxtrAby4pY0CWXtE5vLc+gMRkfcK8O+hmFUvftXXYMqfgc1/2z/Gx86fxOvVbXtSlqwZvrlaaLHUqlVnMJcmpFQt5sCfsyahSYBTKNuJBOwG3w+QXXGVSMYpsTBXDg689paJFBdMaZ9QoWOjzpg9Ngj+pwdBH17i4X0MxftufIzEtTpQf5ItK80ZO62ie/4ezrJ0bBiP1GAwvU=
+  gem: sensu-package-metrics
+  on:
+    tags: true
+    repo: alphagov/sensu-package-metrics
