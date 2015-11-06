@@ -1,4 +1,4 @@
-# Sensu Package Metrics
+# Sensu Package Metrics [![Build Status](https://travis-ci.org/alphagov/sensu-package-metrics.svg?branch=master)](https://travis-ci.org/alphagov/sensu-package-metrics)
 
 This gem provides a sensu check that can be run to return metric details regarding installed versions of a package. The expected output is a JSON object like so:
 ```
